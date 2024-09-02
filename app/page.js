@@ -1,9 +1,11 @@
-import Link from 'next/link';
+import Link from "next/link";
 
-import ImageSlideshow from '@/components/images/image-slideshow';
-import classes from './page.module.css';
+import ImageSlideshow from "@/components/images/image-slideshow";
+import classes from "./page.module.css";
 
 export default function Home() {
+  console.log("note: Server side rendering by default");
+
   return (
     <>
       <header className={classes.header}>
@@ -26,8 +28,8 @@ export default function Home() {
           <h2>How it works</h2>
           <p>
             NextLevel Food is a platform for foodies to share their favorite
-            recipes with the world. It&apos;s a place to discover new dishes, and to
-            connect with other food lovers.
+            recipes with the world. It&apos;s a place to discover new dishes,
+            and to connect with other food lovers.
           </p>
           <p>
             NextLevel Food is a place to discover new dishes, and to connect
@@ -39,8 +41,8 @@ export default function Home() {
           <h2>Why NextLevel Food?</h2>
           <p>
             NextLevel Food is a platform for foodies to share their favorite
-            recipes with the world. It&apos;s a place to discover new dishes, and to
-            connect with other food lovers.
+            recipes with the world. It&apos;s a place to discover new dishes,
+            and to connect with other food lovers.
           </p>
           <p>
             NextLevel Food is a place to discover new dishes, and to connect
