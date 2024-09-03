@@ -1,8 +1,8 @@
-import Image from 'next/image';
-import { notFound } from 'next/navigation';
+import Image from "next/image";
+import { notFound } from "next/navigation";
 
-import { getMeal } from '@/lib/meals';
-import classes from './page.module.css';
+import { getMeal } from "@/lib/meals";
+import classes from "./page.module.css";
 
 export async function generateMetadata({ params }) {
   const meal = getMeal(params.mealSlug);
@@ -24,7 +24,7 @@ export default function MealDetailsPage({ params }) {
     notFound();
   }
 
-  meal.instructions = meal.instructions.replace(/\n/g, '<br />');
+  meal.instructions = meal.instructions.replace(/\n/g, "<br />");
 
   return (
     <>
@@ -33,7 +33,7 @@ export default function MealDetailsPage({ params }) {
           <Image
             src={`https://maxschwarzmueller-nextjs-demo-users-image.s3.amazonaws.com/${meal.image}`}
             alt={meal.title}
-            fill
+            fill //note: fill available space or give height and width
           />
         </div>
         <div className={classes.headerText}>
