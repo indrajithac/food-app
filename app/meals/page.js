@@ -9,7 +9,7 @@ export const metadata = {
   title: "All Meals",
   description: "Browse the delicious meals shared by our vibrant community.",
 };
-
+//note: seprated because using asybc..so not effected by loading
 async function Meals() {
   console.log("Fetching meals");
   const meals = await getMeals();
